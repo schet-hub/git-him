@@ -31,3 +31,13 @@ function reveal() {
   }
   window.addEventListener("scroll", reveal, {passive: true});
   window.addEventListener("scroll", rev, {passive: true});
+
+function openPopup() {
+    var popup = document.querySelector('.popup');
+    popup.style.display = 'block';
+  }
+function closePopup() {
+    var popup = document.querySelector('.popup');
+    popup.style.display = 'none';
+  }
+
