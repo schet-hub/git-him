@@ -65,9 +65,31 @@
                     <a href="page/box.html"  class="more-btn">
                         <span>Подробнее</span>
                     </a>
-                    <a href="#contact-id"  class="more-btn">
-                        <span>Заказать</span>
-                    </a>
+                    <button class="more-btn" onclick="openPopup()"><span>Заказать</span></button>
+            <div class="popupWrap">
+                <div class="popup" >
+                    <div class="popupCont" >
+                        <div>
+                            <form action="send.php" method="POST">
+                                
+                                    <legend>Введите данные</legend>
+                                    <label>Ваш номер телефона:</label>
+                                    <input name="phone" type="text" placeholder="Номер телефона" required>
+                                    <label>Ваш email:</label>
+                                    <input name="email" type="email" placeholder="Email" required>
+                                    <label>Укажите параметры  (объем, высота) и получите расчет</label>
+                                    <label><textarea name="desk" placeholder="Укажите параметры  (объем, высота)" required></textarea><label></label>
+                                    <input type="submit" value="Отправить">
+                            </form>
+                        </div>
+                        <div>
+                            <button class="more-btn" onclick="closePopup()"><span>Закрыть</span></button>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
                 </div>  
             </div>
         </div>

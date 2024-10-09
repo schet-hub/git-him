@@ -1,40 +1,41 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Получаем данные из формы
-    $phone = htmlspecialchars(trim($_POST['phone']));
-    $email = htmlspecialchars(trim($_POST['email']));
-    $desk = htmlspecialchars(trim($_POST['desk']));
 
-    // Валидация полей
-    if (empty($phone) || empty($email) || empty($desk)) {
-        echo "Пожалуйста, заполните все поля.";
-        exit;
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
+    require 'phpmailer/src/PHPMailer.php';
+    require 'phpmailer/src/Exception.php';
+
+    $mail = new PHPMailer(true);
+    $mail->CharSet = 'UTF-8';
+    $mail->setLanguage('ru','phpmailer/language/');
+    
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
+    $desk = $_POST['desk'];
+
+    $mail->IsSMPTP();
+    $mail->Host = 'smpt.mail.ru';
+    $mail->SMTPAuth = true;
+    $mail->Username ='himiliahostplast@mail.ru';
+    $mail->Passward = 'nU6tWXnRiRg5nAtqGD3S';
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 465;
+
+    $mail->setFrom('himiliahostplast@mail.ru');
+    $mail->addAddress('schet19@outlook.com');
+
+    $mail->IsHTML(true);
+
+    $mail->Subject = 'Заявка с сайта';
+    $mail->Body = 'Номер телефона'.$phone .'Почта:' .$email .'Описание заказа' .$desk ;
+    $mail->AltBody ='';
+
+    if (!$mail->send()){
+        echo'yes';
+    }
+    else{
+        echo'no gay';
     }
 
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Некорректный email.";
-        exit;
-    }
-
-    // Настройки отправки письма
-    $to = "schet19@outlook.com";  // Замените на свой email
-    $subject = "Новая заявка с формы";
-    $message = "
-    Телефон: $phone\n
-    Email: $email\n
-    Описание: $desk
-    ";
-    $headers = "From: no-reply@yourdomain.com\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-type: text/plain; charset=UTF-8\r\n";
-
-    // Отправка письма
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Сообщение успешно отправлено!";
-    } else {
-        echo "Ошибка при отправке сообщения.";
-    }
-} else {
-    echo "Некорректный метод отправки данных.";
-}
 ?>
