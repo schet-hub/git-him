@@ -110,7 +110,7 @@ h1{
     padding-top: 50%; 
   }
   .header-bg{
-    background-image: url(../image/bg.png);
+    background-image: url(../image/sky.png);
     background-size:cover;
     background-position: center;
 
@@ -122,7 +122,7 @@ h1{
   color: #55a2d3;
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 10% ;
+  padding-top: 5% ;
 }
 @media(max-width:1400px){
   .about-text{
@@ -150,24 +150,21 @@ h1{
 /* ------------------------------------ production ---------------------*/
 .prod-h{
   text-align: center;
-  padding-top: 10%;
+  padding-top: 5%;
+  color: #55a2d3;
 }
 
 @media(max-width:1400px){
 
   .but-sec-r{
+ 
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: 1;
-    padding-left: 100%;
+    align-items: flex-start;
   }
   .but-sec-l{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: 1;
-    padding-right: 60%;
+    
+    text-align: right;
+
   }
 }
 .but-sec-r{
@@ -228,6 +225,8 @@ h1{
   text-decoration: none;
   width: 20%;
   text-align: center;
+  border-style: outset;
+  border-color: #fff;
 }
 .more-btn:hover{
   background-color: #ffffff;

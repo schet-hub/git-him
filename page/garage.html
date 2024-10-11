@@ -31,9 +31,9 @@
         <h1 class="blue">Чаша для смотровой ямы в гараж</h1>
     </div>
     <div class="plast-img">
-        <img class="plast-img-cont" src="../image/page-img/plast1.png">
-        <img class="plast-img-cont" src="../image/page-img/plast2.png">
-        <img class="plast-img-cont" src="../image/page-img/plast3.png">
+        <img class="plast-img-cont" src="../image/gallary/garage/1.png">
+        <img class="plast-img-cont" src="../image/gallary/garage/2.png">
+        <img class="plast-img-cont" src="../image/gallary/garage/3.png">
     </div>
     <div class="plast-text">
         <p class="blue">Идеальное решение для вашего гаража и погреба! <br>
@@ -52,8 +52,8 @@
                 <div class="popup" >
                     <div class="popupCont" >
                         <div>
-                            <form class="form-style" action="send.php" method="POST">
-                                
+                            <form class="form-style"  action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="e9ac4cca-c6ed-4b19-9013-13592d46dca6">
                                     <legend>Введите данные</legend>
                                     <label>Ваш номер телефона:</label>
                                     <input name="phone" type="text" placeholder="Номер телефона" required>
@@ -61,13 +61,11 @@
                                     <input name="email" type="email" placeholder="Email" required>
                                     <label>Укажите параметры  (объем, высота) и получите расчет</label>
                                     <label><textarea name="desk" placeholder="Укажите параметры  (объем, высота)" required></textarea><label></label>
-                                    <input type="submit" value="Отправить">
+                                    <input  class="more-btn" type="submit" value="Отправить"><br>
+                                    <button class="more-btn" onclick="closePopup()"><span>Закрыть</span></button>
                             </form>
                         </div>
-                        <div class="form-but">
-                            <button class="more-btn" onclick="closePopup()"><span>Закрыть</span></button>
-                            
-                        </div>
+                        
                         
                     </div>
                 </div>
