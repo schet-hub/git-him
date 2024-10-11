@@ -15,6 +15,9 @@ html{
 .blue{
   color: #55a2d3;
 }
+.white{
+  color: white;
+}
 p{
   color:white;
   font-size:25px;
@@ -69,7 +72,7 @@ h1{
   }
 }
 .nav-list ul li a{
-  color: #55a2d3;
+
   text-decoration: none;
 }
 .nav-list ul li a:hover::before{
@@ -88,6 +91,7 @@ h1{
     transition: transform 0.3s ease-in-out;
 }
   .header-bg{
+    background-image: url("../image/sky.png");
     background-size:cover;
     background-position: center;
     height: 100vh;
@@ -156,14 +160,14 @@ h1{
     justify-content: space-between;
     align-items: flex-end;
     flex-wrap: 1;
-    padding-left: 10%;
+    padding-left: 100%;
   }
   .but-sec-l{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     flex-wrap: 1;
-    padding-right: 10%;
+    padding-right: 60%;
   }
 }
 .but-sec-r{
@@ -304,7 +308,7 @@ h1{
 .con-card{
   display: flex;
   justify-content: space-between;
-  background-color: black;
+  background-color: #55a2d3;
   border-radius: 20px;
   padding: 20px;
   height: 10vh;
@@ -369,7 +373,7 @@ h1{
   padding-bottom: 2%;
 }
 .footer-text{
-  background-color: #1a1b1d;
+  background-color: #55a2d3;
   text-align: center;
 }
 /* Dialog ----------------------------------------------------------------------------*/
@@ -394,7 +398,8 @@ input,
 legend,
 textarea {
   font-size: 1.3rem;
-  line-height: 1.2
+  line-height: 1.2;
+  align-items: center;
 }
 label {
   margin-bottom: 0.4rem;
@@ -409,4 +414,10 @@ textarea {
 
 button {
   margin-top: 3rem;
+}
+.form-style{
+  text-align: center;
+}
+.form-but{
+  padding-left: 30%;
 }

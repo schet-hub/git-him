@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Химелия =Прозводство пластмассовых изделий</title>
+    <title>Химилия - Прозводство пластмассовых изделий</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/main.js"></script>
+    <link rel="icon" type="image/png" href="../favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
     </style>
@@ -14,16 +16,16 @@
 <header>
     <div class="nav-list">
         <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="../index.html">О нас</a></li>
-            <li><a href="../index.html">Продукция</a></li>
-            <li><a href="../index.html">Контакты</a></li>
+            <li><a class="blue" href="../index.html">Главная</a></li>
+            <li><a class="blue" href="../index.html">О нас</a></li>
+            <li><a class="blue" href="../index.html">Продукция</a></li>
+            <li><a class="blue" href="../index.html">Контакты</a></li>
         </ul>
     </div>
 </header>
 <section class="prod-sect">
     <div class="text-h1-prod">
-        <h1>Профильная труба из полипропилена</h1>
+        <h1 class="blue">Профильная труба из полипропилена</h1>
     </div>
     <div class="plast-img">
         <img class="plast-img-cont" src="../image/page-img/plast1.png">
@@ -31,7 +33,7 @@
         <img class="plast-img-cont" src="../image/page-img/plast3.png">
     </div>
     <div class="plast-text">
-        <p>Продается полипропиленовый профиль высокого качества по разумной цене! <br>
+        <p class="blue">Продается полипропиленовый профиль высокого качества по разумной цене! <br>
             <br>
             Мы предлагаем профильные трубы голубого, серого и черного цвета, идеально подходящие для различных конструкций.<br>
             <br>
@@ -48,7 +50,32 @@
             - Каркасы теплиц<br>
             - Элементы садовой мебели<br>
             <br>
-            Популярные размеры: 40х60, 60х80, 80х100. Изготовим другие размеры при наличии объема от 2 км.</p>
+            Популярные размеры: 40х60, 60х80, 80х100. Изготовим другие размеры при наличии объема от 2 км.</p><br>
+            <button class="more-btn" onclick="openPopup()"><span>Заказать</span></button>
+            <div class="popupWrap">
+                <div class="popup" >
+                    <div class="popupCont" >
+                        <div>
+                            <form class="form-style" action="send.php" method="POST">
+                                
+                                    <legend>Введите данные</legend>
+                                    <label>Ваш номер телефона:</label>
+                                    <input name="phone" type="text" placeholder="Номер телефона" required>
+                                    <label>Ваш email:</label>
+                                    <input name="email" type="email" placeholder="Email" required>
+                                    <label>Укажите параметры  (объем, высота) и получите расчет</label>
+                                    <label><textarea name="desk" placeholder="Укажите параметры  (объем, высота)" required></textarea><label></label>
+                                    <input type="submit" value="Отправить">
+                            </form>
+                        </div>
+                        <div class="form-but">
+                            <button class="more-btn" onclick="closePopup()"><span>Закрыть</span></button>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
     </div>
 </section>  <!-- листы пластика-->
 
@@ -56,8 +83,8 @@
 <section id = "contact-id">  <!-- контакты-->
     <div class="contact">
         <div>
-            <h1>Контакты</h1><br>
-            <p>Оформить заказ вы можете любым удобным для вас способом</p>
+            <h1 class="blue">Контакты</h1><br>
+            <p class="blue">Оформить заказ вы можете любым удобным для вас способом</p>
         </div>
         <div class="con-place">
             <div class="con-card">
